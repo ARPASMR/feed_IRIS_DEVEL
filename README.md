@@ -1,4 +1,4 @@
-# feed IRIS
+# feed IRIS (TEST PER IRIS DEVEL - versione di sviluppo)
 Alimentazione di IRIS tramite script python in sostituzione di recupero_RT
 
 # prerequisiti
@@ -20,13 +20,28 @@ _arg3_ tempo in secondi tra una esecuzione e la successiva (*facoltativo, defaul
 
 
 # ENV
-Nel container sono già esplicitate le variabili d'ambiente di base:
 
-IRIS_USER_ID *postgres*
+> **Sono state esportate come variabili d'ambiente le variabili:**
+> ```diff
+> - IRIS_USER_ID
+> - IRIS_DB_NAME
+> - IRIS_DB_HOST
+> ```
 
-IRIS_DB_NAME *iris_base*
+> **Le quali corrispondono**
+> **per LA VERSIONE DI PRODUZIONE a**:
+> ```diff
+> IRIS_USER_ID *postgres*
+> IRIS_DB_NAME *iris_base*
+> IRIS_DB_HOST *10.10.0.19*
+> ```
 
-IRIS_DB_HOST *10.10.0.19*
+> **per LA VERSIONE DI SVILUPPO a**:
+> ```diff
+> IRIS_USER_ID *postgres*
+> IRIS_DB_NAME *iris_devel*
+> IRIS_DB_HOST *10.10.0.19*
+> ```
 
 Devono essere specificate le variabili:
 
